@@ -14,6 +14,9 @@ In order to log-in to AutoLab, you must use your DTU email address (your-student
 ### Schedule
 ![image](https://github.com/user-attachments/assets/32754060-5c97-4604-9880-41c3bf664415)
 
+![image](https://github.com/user-attachments/assets/1937d4ca-e089-41da-bf4b-7754acc7870d)
+
+
 ### TODO:
 - [x] Week 1
 - [x] Week 2
