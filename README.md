@@ -20,14 +20,14 @@ In order to log-in to AutoLab, you must use your DTU email address (your-student
 ### TODO:
 - [x] Week 1
 - [x] Week 2
-- [ ] Week 3
-- [ ] Week 4
-- [ ] Week 5
-- [ ] Week 6
-- [ ] Week 7
-- [ ] Week 8
-- [ ] Week 9
-- [ ] Week 10
-- [ ] Week 11
+- [x] Week 3
+- [x] Week 4
+- [x] Week 5
+- [x] Week 6
+- [x] Week 7
+- [x] Week 8
+- [x] Week 9
+- [x] Week 10
+- [x] Week 11
 - [ ] Exam prep (2020-24)
 - [ ] General know-how et cetera...
