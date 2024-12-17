@@ -60,6 +60,25 @@ void ParkingArea::park(string parkingSpaceID, string plate, string owner, Catego
 
 // Task 3(b).  Implement this method
 void ParkingArea::leave(vector<string> plates) {
+    // Vehicles leaving parking space
+    // iterate over all vehicle plates in the input string
+    for (const auto& plate : plates) { // for each plate in all vehicle plates
+        // for parking space #first to parking space #last
+        for (auto i = this->parkingOccupancy.begin(); i != this->parkingOccupancy.end(); i++) {
+            // if the plate of the vehicle in the parking space 
+            // is the same as the plate of the vehicle leaving
+
+            // i is a a pointer to a pair of key-value pairs
+            // i->first is the key, i->second is the value
+            // i->second.plate is the plate of the vehicle in the parking space
+
+            if (i->second.plate == plate) {
+                // remove the vehicle from the parking space
+                this->parkingOccupancy.erase(i);
+                break; // match found, exit loop
+            }
+        }
+    }
 }
 
 
