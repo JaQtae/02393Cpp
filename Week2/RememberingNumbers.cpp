@@ -18,7 +18,7 @@ int main() {
             cout << count[val] << endl;
             count[val]++; // Increment count of value by 1
         } else {
-            cout << "" << endl;
+            cout << "" << endl; 
         }
     }
 

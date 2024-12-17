@@ -1,0 +1,15 @@
+Wrote 9 and 1 to buffer. Buffer contains 2 values
+Buffer contains 9? true
+Buffer contains 1? true
+Read 9 from buffer. Buffer now contains 1 values
+Buffer still contains 9? false
+Buffer still contains 1? true
+Wrote 3, 8, 12 and 7 to buffer. Buffer now contains 3 values
+Buffer still contains 1? false
+Buffer contains 8? false
+Buffer contains 4? true
+Wrote 5 to buffer. Buffer now contains 3 values
+Buffer still contains 4? false
+Buffer contains 6? true
+Read 6 from buffer. Buffer now contains 2 values
+Buffer still contains 6? false

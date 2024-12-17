@@ -9,11 +9,12 @@ int main() {
     char id;
     int value;
     vector<int> a_values, b_values;
+    string userInput;
+    // Operate on per lline basis
+    getline(cin, userInput);
+    stringstream ss(userInput); // Give input line struct
 
-    string userinput;
-    stringstream ss(userinput);
-
-    // Reading input
+    // Reading input continuously. (Needs end of input (EOL) to execute on enter)
     while (ss >> id >> value) {
         if (id == 'a') {
             a_values.push_back(value);

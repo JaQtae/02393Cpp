@@ -1,0 +1,10 @@
+Initial parking spaces occupancy:
+Parking 'LYNGBY01' is for a car and contains a car with license plate AB123XY belonging to Alice
+Parking 'LYNGBY02' is for a car and contains a car with license plate CD987WQ belonging to Bob
+Parking 'LYNGBY03' is for a car and contains a motorbike with license plate EF456SA belonging to Claire
+Parking 'LYNGBY04' is for a car and is empty
+Parking 'LYNGBY05' is for a truck and contains a truck with license plate GH102MN belonging to Daisy
+Parking 'LYNGBY06' is for a motorbike and is empty
+
+Parking area contains the following misplaced vehicles:
+EF456SA
