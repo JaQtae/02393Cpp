@@ -1,5 +1,6 @@
 {
     "terminal.integrated.profiles.windows": {
+        
 
         "PowerShell": {
             "source": "PowerShell",
