@@ -72,6 +72,8 @@ void ParkingArea::leave(vector<string> plates) {
             // i->first is the key, i->second is the value
             // i->second.plate is the plate of the vehicle in the parking space
 
+            // FROM DEBUGGER: i
+            // {first = "LYNGBY01", second = {plate = "AB123XY", owner = "Alice"}}
             if (i->second.plate == plate) {
                 // remove the vehicle from the parking space
                 this->parkingOccupancy.erase(i);
@@ -84,11 +86,68 @@ void ParkingArea::leave(vector<string> plates) {
 
 // Task 3(c).  Implement this method
 unsigned int ParkingArea::getEmptySpaces(Category category) {
-	return 0;
+
+    unsigned int count = 0; // counting empty parking spaces
+    // iterate over all parking spaces
+    // RANGE BASED FOR LOOP: don't need to manage index explicitly
+    // for (element_type variable : container) {  <code>  }
+    // Go through each element in container one by one.
+
+    // equivalent to:
+    //     for (size_t i = 0; i < this->parkingSpaces.size(); i++) {
+    //     const auto& parkingSpace = this->parkingSpaces[i];
+    //     }      
+    for (const auto& parkingSpace : this->parkingSpaces) {
+        // if Category of parking space is the one we query for
+
+        if (parkingSpace.second == category) {
+            // if this instance of the parking space is not found
+            // add to empty counter
+            if (this->parkingOccupancy.find(parkingSpace.first) == this->parkingOccupancy.end()) {
+                count++;
+            }
+        }
+    }
+
+	return count;
 }
 
 // Task 3(d).  Implement this method
 void ParkingArea::findVehicles(vector<string> owners) {
+    // Map-struct is inherently sorted by key order.
+    // Hence, it does not follow the order of parkingSpaces!
+
+
+    for (const auto& parkingSpace : this->parkingSpaces) { // each parking space
+        auto parkingSpaceID = parkingSpace.first; // get the ID
+        auto it = this->parkingOccupancy.find(parkingSpaceID); // if space occupied
+
+        if (it != this->parkingOccupancy.end()){ // if it is occupied  (NOT NOT EMPTY)
+            for (const auto& owner : owners) { // for each owner in owners
+                if (it->second.owner == owner) { // if parkingspace owner matches
+                    cout << parkingSpaceID << endl; // print
+                }
+            }
+        }
+
+    }
+    // The ordering issue arises because std::map in C++ is sorted by key according to
+    // the comparison function (by default, it uses the < operator). 
+    // This means that when you iterate over a std::map, the elements will be ordered by the keys,
+    // not by the order in which they were inserted or the order in parkingSpaces.
+
+    
+    // Doesn't work since map is stored in key order, not in the order of parkingSpaces...
+    // for (auto& owner: owners) {
+    //     // Check all parking spaces
+    //     for (auto& parkingSpace : this->parkingSpaces) {
+    //         // If the parking space is occupied and has the queried owner value
+    //         if (parkingOccupancy.find(parkingSpace.first) != parkingOccupancy.end() && parkingOccupancy[parkingSpace.first].owner == owner) {
+    //             // print corresponding parkingSpaceID of owner
+    //            cout << parkingSpace.first << endl; // parkingSpaceID
+    //         }
+    //     }
+    // }
 }
 
 // Do not modify

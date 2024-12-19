@@ -1,0 +1,7 @@
+The cavern at position (7,5) contains: the Wumpus
+The cavern at position (1,2) contains: the player
+The cavern at position (0,4) contains: a rock
+
+The new cavern at position (7,5) contains: nothing
+The new cavern at position (1,2) contains: the Wumpus
+The new cavern at position (1,15) contains: a rock

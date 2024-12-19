@@ -1,0 +1,36 @@
+Initial cavern:
+X#  #    #   ##    #
+ #  ##  ##  #      #
+#      #  #         
+#   #  #   #  #  #  
+           # #      
+    #  # #  ####  # 
+  ##      #   ##W  #
+ # #  ####     #   #
+        ## #  #     
+        #  # #  #   
+
+Moving to row 3, column 2...
+
+Moving to row 6, column 5...
+
+Moving to row 6, column 9...
+
+Moving to row 8, column 11...
+Cannot move to row 8, column 11!
+
+Moving to row 7, column 13...
+
+Moving to row 9, column 12...
+
+Revealed cavern after movements:
+ #  #    #   ##    #
+ #  ##  ##  #      #
+#      #  #         
+#   #  #   #  #  #  
+           # #      
+    #  # #  ####  # 
+  ##      #   ##W  #
+ # #  ####     #   #
+        ## #  #     
+        #  #X#  #   

@@ -1,0 +1,10 @@
+Most frequent value: -1
+Finding the frequency for value 0 returns: 0
+Wrote 9 and 7. Most frequent value: 7
+Finding the frequency for value 9 returns: 1
+Finding the frequency for value 7 returns: 1
+Wrote 3 and 9. Most frequent value: 9
+Finding the frequency for value 3 returns: 1
+Finding the frequency for value 9 returns: 2
+Buffer cleared. Most frequent value: -1
+Finding the frequency for value 9 now returns: 0
