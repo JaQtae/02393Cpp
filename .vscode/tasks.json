@@ -7,7 +7,7 @@
         "args": [
           "-fdiagnostics-color=always",
           "-g",
-          "*.cpp", // Scope has to be a single folder
+          "*.cpp",//S -> Scope has to be a single folder || "${file}" -> Scope is a single file
           "-o",
           "${fileDirname}\\${fileBasenameNoExtension}.exe"
         ],

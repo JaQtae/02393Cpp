@@ -6,8 +6,34 @@ using namespace std;
 
 // Task 1(a).  Implement this function
 Tile **createCavern(unsigned int m, unsigned int n) {
-    // Replace the following with your code
-    return nullptr;
+    // Allocate memory for the tile array
+    Tile **cav = (Tile **)malloc(m * sizeof(Tile *));
+    
+    if (!cav) {
+        // Handle memory allocation failure
+        return nullptr;
+    }
+    
+    // Initialize each tile in the cavern
+    for (unsigned int i = 0; i < m; ++i) {
+        cav[i] = (Tile *)malloc(n * sizeof(Tile));
+        
+        if (!cav[i]) {
+            // If any allocation fails, free previously allocated memory and return NULL
+            for (unsigned int j = 0; j < i; ++j) {
+                free(cav[j]);
+            }
+            free(cav);
+            return nullptr;
+        }
+        
+        for (unsigned int j = 0; j < n; ++j) {
+            cav[i][j].content = nothing;
+            cav[i][j].explored = false;
+        }
+    }
+    
+    return cav;
 }
 
 // Task 1(b).  Implement this function
