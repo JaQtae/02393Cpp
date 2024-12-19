@@ -1,0 +1,28 @@
+Initial locker occupancy:
+Locker 'LYNGBY01' contains a package from Alice to Daisy (unlock code: 1234)
+Locker 'LYNGBY02' contains a package from Claire to Alice (unlock code: 567)
+Locker 'LYNGBY03' contains a package from Daisy to Bob (unlock code: 890)
+Locker 'LYNGBY04' is empty
+Locker 'LYNGBY05' contains a package from Bob to Daisy (unlock code: 159)
+Locker 'LYNGBY06' is empty
+
+After putting a package from Alice to Bob inside an empty locker:
+Locker 'LYNGBY01' contains a package from Alice to Daisy (unlock code: 1234)
+Locker 'LYNGBY02' contains a package from Claire to Alice (unlock code: 567)
+Locker 'LYNGBY03' contains a package from Daisy to Bob (unlock code: 890)
+Locker 'LYNGBY04' contains a package from Alice to Bob (unlock code: 951)
+Locker 'LYNGBY05' contains a package from Bob to Daisy (unlock code: 159)
+Locker 'LYNGBY06' is empty
+
+After retrieving a package:
+Locker 'LYNGBY01' is empty
+Locker 'LYNGBY02' contains a package from Claire to Alice (unlock code: 567)
+Locker 'LYNGBY03' contains a package from Daisy to Bob (unlock code: 890)
+Locker 'LYNGBY04' contains a package from Alice to Bob (unlock code: 951)
+Locker 'LYNGBY05' contains a package from Bob to Daisy (unlock code: 159)
+Locker 'LYNGBY06' is empty
+
+Package(s) addressed to Bob or Daisy:
+LYNGBY03
+LYNGBY04
+LYNGBY05

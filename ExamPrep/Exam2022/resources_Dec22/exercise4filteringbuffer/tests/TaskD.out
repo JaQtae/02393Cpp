@@ -1,0 +1,15 @@
+Most frequent value is: -999
+Finding the frequency for value 0 returns: 0
+Finding the frequency for value -999 returns: 0
+Most frequent value now is: 2
+Finding the frequency for value 2 returns: 2
+Finding the frequency for value -999 returns: 0
+Cleared.  Most frequent value is: -999
+Finding the frequency for value 2 returns: 0
+Finding the frequency for value -999 returns: 0
+Most frequent value now is: -999
+Finding the frequency for value 11 returns: 1
+Finding the frequency for value -999 returns: 1
+Cleared.  Most frequent value is: -999
+Finding the frequency for value 11 returns: 0
+Finding the frequency for value -999 returns: 0
