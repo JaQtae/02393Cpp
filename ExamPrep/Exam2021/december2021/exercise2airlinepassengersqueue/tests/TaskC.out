@@ -1,0 +1,14 @@
+The passengers queue is: 
+Fiona F. - ticket: 987
+Emil E. - ticket: 789 (priority)
+Daria D. - ticket: 654
+Charlie C. - ticket: 456 (priority)
+Barbara B. - ticket: 321 (priority)
+Alfred A. - ticket: 123
+
+The queue of priority passengers is:
+Emil E. - ticket: 789 (priority)
+Charlie C. - ticket: 456 (priority)
+Barbara B. - ticket: 321 (priority)
+
+The queue of priority passengers in an empty queue is:

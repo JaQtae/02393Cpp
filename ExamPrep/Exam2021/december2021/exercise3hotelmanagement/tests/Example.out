@@ -1,0 +1,26 @@
+Initial hotel occupancy:
+Room 'Daisy' is occupied by Alan Smithee (id: xyz890)
+Room 'Geranium' is empty
+Room 'Lotus' is occupied by Kathryn Bigelow (id: 456abc)
+Room 'Orchid' is occupied by Alan Smithee (id: abc123)
+Room 'Tulip' is occupied by Denis Villeneuve (id: 123xyz)
+
+After adding room 'Waterlily':
+Room 'Daisy' is occupied by Alan Smithee (id: xyz890)
+Room 'Geranium' is empty
+Room 'Lotus' is occupied by Kathryn Bigelow (id: 456abc)
+Room 'Orchid' is occupied by Alan Smithee (id: abc123)
+Room 'Tulip' is occupied by Denis Villeneuve (id: 123xyz)
+Room 'Waterlily' is empty
+
+After adding a guest:
+Room 'Daisy' is occupied by Alan Smithee (id: xyz890)
+Room 'Geranium' is empty
+Room 'Lotus' is occupied by Kathryn Bigelow (id: 456abc)
+Room 'Orchid' is occupied by Alan Smithee (id: abc123)
+Room 'Tulip' is occupied by Denis Villeneuve (id: 123xyz)
+Room 'Waterlily' is occupied by Taika Waititi (id: pqr567)
+
+Room(s) occupied by someone called Alan Smithee:
+Daisy
+Orchid

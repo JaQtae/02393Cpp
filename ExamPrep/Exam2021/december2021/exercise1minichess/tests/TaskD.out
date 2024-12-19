@@ -1,0 +1,17 @@
+Chessboard 'c':
+_ _ r _ 
+b _ _ _ 
+_ B _ _ 
+R _ _ _ 
+Is the piece in (2,1) threatened? Yes!
+Is the piece in (1,0) threatened? Yes!
+
+Chessboard 'd':
+_ _ r _ _ _ 
+b _ _ _ _ _ 
+_ _ _ _ _ _ 
+_ _ R _ _ _ 
+_ _ _ _ _ _ 
+_ _ _ _ _ B 
+Is the piece in (1,0) threatened? No!
+Is the piece in (3,2) threatened? Yes!

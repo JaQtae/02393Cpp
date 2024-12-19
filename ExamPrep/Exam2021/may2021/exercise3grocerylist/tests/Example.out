@@ -1,0 +1,27 @@
+Initial grocery list:
+name='Lasagne'; quantity=1; notes='With eggs if available'
+name='Salmon'; quantity=500; notes='Smoked if available'
+name='Spinach'; quantity=300; notes='Fresh'
+name='Dessert'; quantity=8; notes='Maybe lagkage?'
+
+After adding cheddar:
+name='Lasagne'; quantity=1; notes='With eggs if available'
+name='Salmon'; quantity=500; notes='Smoked if available'
+name='Spinach'; quantity=300; notes='Fresh'
+name='Dessert'; quantity=8; notes='Maybe lagkage?'
+name='Cheddar'; quantity=500; notes='Not too mature'
+
+After removing some spinach:
+name='Lasagne'; quantity=1; notes='With eggs if available'
+name='Salmon'; quantity=500; notes='Smoked if available'
+name='Spinach'; quantity=100; notes='Fresh'
+name='Dessert'; quantity=8; notes='Maybe lagkage?'
+name='Cheddar'; quantity=500; notes='Not too mature'
+
+After copying salmon into haddock:
+name='Lasagne'; quantity=1; notes='With eggs if available'
+name='Salmon'; quantity=500; notes='Smoked if available'
+name='Spinach'; quantity=100; notes='Fresh'
+name='Dessert'; quantity=8; notes='Maybe lagkage?'
+name='Cheddar'; quantity=500; notes='Not too mature'
+name='Haddock'; quantity=500; notes='Smoked if available'

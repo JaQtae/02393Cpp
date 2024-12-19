@@ -1,0 +1,10 @@
+Initial list:
+ 1 (x9) 2 (x6) 3 (x5)
+Result of concatenation with an empty list (1):
+ 1 (x9) 2 (x6) 3 (x5)
+Result of concatenation with an empty list (2):
+ 1 (x9) 2 (x6) 3 (x5)
+Result of concatenation with e6:
+ 1 (x9) 2 (x6) 3 (x5) 4 (x2) 5 (x3) 6 (x7)
+Result of concatenation with e9:
+ 1 (x9) 2 (x6) 3 (x5) 4 (x2) 5 (x3) 6 (x10) 7 (x5) 8 (x5)

@@ -1,0 +1,10 @@
+Current buffer occupancy: 5
+Reading from the buffer returns: 0
+Reading from the buffer returns: 10
+Reading from the buffer returns: 20
+Current buffer occupancy: 2
+Buffer occupancy after reset: 0
+Current buffer occupancy: 8
+Reading from the buffer returns: 0
+Reading from the buffer returns: 10
+Reading from the buffer returns: 20

@@ -1,0 +1,33 @@
+Adding a new room 'Cyclamen'
+Adding a new room 'Gladiolus'
+
+Hotel occupancy:
+Room 'Daisy' is occupied by Alan Smithee (id: xyz890)
+Room 'Geranium' is empty
+Room 'Lotus' is occupied by Kathryn Bigelow (id: 456abc)
+Room 'Orchid' is occupied by Alan Smithee (id: abc123)
+Room 'Tulip' is occupied by Denis Villeneuve (id: 123xyz)
+Room 'Cyclamen' is empty
+Room 'Gladiolus' is empty
+
+Room(s) occupied by a guest:
+Daisy
+Lotus
+Orchid
+Tulip
+
+Adding a guest to room 'Cyclamen'
+
+Updated hotel occupancy:
+Room 'Daisy' is occupied by Alan Smithee (id: xyz890)
+Room 'Geranium' is empty
+Room 'Lotus' is occupied by Kathryn Bigelow (id: 456abc)
+Room 'Orchid' is occupied by Alan Smithee (id: abc123)
+Room 'Tulip' is occupied by Denis Villeneuve (id: 123xyz)
+Room 'Cyclamen' is occupied by Alan Smithee (id: abcdef)
+Room 'Gladiolus' is empty
+
+Room(s) occupied by someone called Alan Smithee:
+Daisy
+Orchid
+Cyclamen

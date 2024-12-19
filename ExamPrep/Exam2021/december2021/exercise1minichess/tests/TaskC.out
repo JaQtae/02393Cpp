@@ -1,0 +1,29 @@
+Chessboard 'c':
+_ _ r _ 
+b _ _ _ 
+_ B _ _ 
+R _ _ _ 
+Can we move from (1,0) to (2,1)? Yes!
+Can we move from (3,0) to (3,3)? Yes!
+The chessboard 'c' is now:
+_ _ r _ 
+_ _ _ _ 
+_ b _ _ 
+_ _ _ R 
+
+Chessboard 'd':
+_ _ r _ _ _ 
+_ b _ _ _ _ 
+_ _ _ _ _ _ 
+_ _ _ _ R _ 
+_ _ _ _ _ _ 
+_ _ _ _ _ B 
+Can we move from (1,1) to (0,2)? No!
+Can we move from (5,5) to (2,2)? Yes!
+The chessboard 'd' is now:
+_ _ r _ _ _ 
+_ b _ _ _ _ 
+_ _ B _ _ _ 
+_ _ _ _ R _ 
+_ _ _ _ _ _ 
+_ _ _ _ _ _ 

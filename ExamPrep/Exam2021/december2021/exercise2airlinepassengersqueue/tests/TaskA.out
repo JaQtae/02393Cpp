@@ -1,0 +1,12 @@
+The passengers queue is: 
+Fiona F. - ticket: 987 (priority)
+Emil E. - ticket: 789
+Daria D. - ticket: 654
+Charlie C. - ticket: 456 (priority)
+Barbara B. - ticket: 321 (priority)
+Alfred A. - ticket: 123
+
+The passenger with ticket 456 is: Charlie C.
+The passenger with ticket 987 is: Fiona F.
+The passenger with ticket 101 is: nobody!
+The passenger with ticket 654 in an empty queue is: nobody!

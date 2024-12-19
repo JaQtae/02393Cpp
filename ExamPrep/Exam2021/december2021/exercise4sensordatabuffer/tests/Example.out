@@ -1,0 +1,10 @@
+Current write count: 0
+Reading from the buffer returns: 0
+Current write count: 2
+Reading from the buffer now returns: 2
+Current write count: 4
+Reading from the buffer now returns: 5
+The buffer average is now: 3
+Current write count: 5
+Reading from the buffer now returns: 5
+The buffer average is now: 4

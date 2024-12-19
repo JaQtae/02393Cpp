@@ -1,0 +1,22 @@
+Initial grocery list:
+name='Lasagne'; quantity=1; notes='With eggs if available'
+name='Salmon'; quantity=500; notes='Smoked if available'
+name='Spinach'; quantity=300; notes='Fresh'
+name='Dessert'; quantity=8; notes='Maybe lagkage?'
+
+After removing some spinach:
+name='Lasagne'; quantity=1; notes='With eggs if available'
+name='Salmon'; quantity=500; notes='Smoked if available'
+name='Spinach'; quantity=100; notes='Fresh'
+name='Dessert'; quantity=8; notes='Maybe lagkage?'
+
+After removing more spinach:
+name='Lasagne'; quantity=1; notes='With eggs if available'
+name='Salmon'; quantity=500; notes='Smoked if available'
+name='Dessert'; quantity=8; notes='Maybe lagkage?'
+
+Trying to remove even more spinach:
+FAILED! (this is correct)
+
+Trying to remove cheddar:
+FAILED! (this is correct)

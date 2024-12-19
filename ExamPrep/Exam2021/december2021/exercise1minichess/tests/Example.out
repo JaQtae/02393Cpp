@@ -1,0 +1,15 @@
+Chessboard:
+b _ r 
+_ _ _ 
+R B _ 
+Is the piece in (0,2) threatened? No!
+Can we move from (0,0) to (1,0)? No!
+Can we move from (2,0) to (2,1)? No!
+Can we move from (2,0) to (0,0)? Yes!
+Can we move from (2,1) to (1,2)? Yes!
+
+The chessboard is now:
+R _ r 
+_ _ B 
+_ _ _ 
+Is the piece in (0,2) threatened? Yes!

@@ -1,0 +1,18 @@
+Initial grocery list:
+name='Lasagne'; quantity=1; notes='With eggs if available'
+name='Salmon'; quantity=500; notes='Smoked if available'
+name='Spinach'; quantity=300; notes='Fresh'
+name='Dessert'; quantity=8; notes='Maybe lagkage?'
+
+After copying spinach into baby spinach:
+name='Lasagne'; quantity=1; notes='With eggs if available'
+name='Salmon'; quantity=500; notes='Smoked if available'
+name='Spinach'; quantity=300; notes='Fresh'
+name='Dessert'; quantity=8; notes='Maybe lagkage?'
+name='Baby spinach'; quantity=300; notes='Fresh'
+
+After copying baby spinach into dessert:
+FAILED! (this is correct)
+
+After copying cheddar into spinach:
+FAILED! (this is correct)
