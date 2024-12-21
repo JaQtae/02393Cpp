@@ -7,9 +7,9 @@
         "args": [
           "-fdiagnostics-color=always",
           "-g",
-          "ex04-main.cpp",
-          "ex04-library.h",
-          "ex04-library.cpp",//S -> Scope has to be a single folder || "${file}" -> Scope is a single file
+          "ex01-main.cpp",
+          "ex01-library.h",
+          "ex01-library.cpp",//S -> Scope has to be a single folder || "${file}" -> Scope is a single file
           "-o",
           "${fileDirname}\\${fileBasenameNoExtension}.exe"
         ],
