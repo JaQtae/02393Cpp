@@ -1,0 +1,5 @@
+Buffer initialized with 5 as upper bound and -2 as default value
+Buffer contains 0 values
+Wrote 4, 2 and 3 to buffer. Buffer contains 3 values
+Wrote 1 and 6 to buffer. Buffer now contains 4 values
+Wrote 7 and 5 to buffer. Buffer now contains 4 values

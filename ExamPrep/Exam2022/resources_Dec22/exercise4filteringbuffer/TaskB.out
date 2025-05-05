@@ -1,0 +1,7 @@
+Finding the frequency for value 0 returns: 0
+Finding the frequency for value -1 returns: 0
+Finding the frequency for value 1 returns: 1
+Finding the frequency for value 2 returns: 2
+Finding the frequency for value 4 returns: 1
+Finding the frequency for value 1 now returns: 3
+Finding the frequency for value 6 returns: 1

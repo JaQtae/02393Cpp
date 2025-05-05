@@ -1,0 +1,47 @@
+Initial locker occupancy:
+Locker 'LYNGBY01' contains a package from Alice to Daisy (unlock code: 1234)
+Locker 'LYNGBY02' contains a package from Claire to Alice (unlock code: 567)
+Locker 'LYNGBY03' contains a package from Daisy to Bob (unlock code: 890)
+Locker 'LYNGBY04' is empty
+Locker 'LYNGBY05' contains a package from Bob to Daisy (unlock code: 159)
+Locker 'LYNGBY06' is empty
+
+After retrieving a package from locker 'LYNGBY03':
+Locker 'LYNGBY01' contains a package from Alice to Daisy (unlock code: 1234)
+Locker 'LYNGBY02' contains a package from Claire to Alice (unlock code: 567)
+Locker 'LYNGBY03' is empty
+Locker 'LYNGBY04' is empty
+Locker 'LYNGBY05' contains a package from Bob to Daisy (unlock code: 159)
+Locker 'LYNGBY06' is empty
+
+After retrieving a package from non-existing locker 'LYNGBY09':
+Locker 'LYNGBY01' contains a package from Alice to Daisy (unlock code: 1234)
+Locker 'LYNGBY02' contains a package from Claire to Alice (unlock code: 567)
+Locker 'LYNGBY03' is empty
+Locker 'LYNGBY04' is empty
+Locker 'LYNGBY05' contains a package from Bob to Daisy (unlock code: 159)
+Locker 'LYNGBY06' is empty
+
+After retrieving a package from locker 'LYNGBY01' with wrong unlock code:
+Locker 'LYNGBY01' contains a package from Alice to Daisy (unlock code: 1234)
+Locker 'LYNGBY02' contains a package from Claire to Alice (unlock code: 567)
+Locker 'LYNGBY03' is empty
+Locker 'LYNGBY04' is empty
+Locker 'LYNGBY05' contains a package from Bob to Daisy (unlock code: 159)
+Locker 'LYNGBY06' is empty
+
+After retrieving a package from empty locker 'LYNGBY04':
+Locker 'LYNGBY01' contains a package from Alice to Daisy (unlock code: 1234)
+Locker 'LYNGBY02' contains a package from Claire to Alice (unlock code: 567)
+Locker 'LYNGBY03' is empty
+Locker 'LYNGBY04' is empty
+Locker 'LYNGBY05' contains a package from Bob to Daisy (unlock code: 159)
+Locker 'LYNGBY06' is empty
+
+After retrieving a package from locker 'LYNGBY05':
+Locker 'LYNGBY01' contains a package from Alice to Daisy (unlock code: 1234)
+Locker 'LYNGBY02' contains a package from Claire to Alice (unlock code: 567)
+Locker 'LYNGBY03' is empty
+Locker 'LYNGBY04' is empty
+Locker 'LYNGBY05' is empty
+Locker 'LYNGBY06' is empty

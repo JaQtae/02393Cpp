@@ -1,0 +1,7 @@
+Buffer initialized with 5 as upper bound and -1 as default value
+Wrote 9 and 1 to buffer. Buffer contains 1 values
+Read 1 from buffer. Buffer now contains 0 values
+Wrote 3, 8, 2 and 4 to buffer. Buffer now contains 3 values
+Set the new upper bound of the buffer to 3. Buffer now contains 1 values
+Read 2 from buffer. Buffer now contains 0 values
+Read -1 from buffer. Buffer now contains 0 values

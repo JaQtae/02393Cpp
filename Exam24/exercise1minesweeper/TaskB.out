@@ -1,0 +1,60 @@
+Manually creating a field of 7x5 tiles
+
+The position of the mines in the field is:
+     
+     
+     
+     
+     
+     
+     
+
+Placing mines
+The position of the mines in the field is:
+M   M
+ M  M
+     
+     
+ MM  
+     
+M M  
+
+Attempting to place mines in the wrong position
+The position of the mines in the field is:
+M   M
+ M  M
+     
+     
+ MM  
+     
+M M  
+
+Attempting to place too many mines
+wrong return value when invoking placeMine
+The position of the mines in the field is:
+M   M
+ M  M
+     
+     
+ MM  
+     
+MMM  
+Manually creating a new field of 3x2 tiles
+
+
+Placing mines
+The position of the mines in the field is:
+  
+ M
+  
+Walking on the field
+The position of the mines in the field is:
+  
+EM
+  
+
+Attempting to place mines after game started
+The position of the mines in the field is:
+  
+EM
+  

@@ -1,0 +1,25 @@
+The playlist is: 
+Billie Jean, Micheal Jackson, Pop, 232, 
+Sandstorm, Darude, Dance, 225, 
+Never Gonna Give You Up, Rick Hashley, Pop, 215, 
+Barbie Girl, Aqua, Dance, 196, 
+
+The total duration of dance songs in the playlist is: 421 seconds
+
+A new playlist containing only songs longer than 220 seconds is: 
+Billie Jean, Micheal Jackson, Pop, 232, 
+Sandstorm, Darude, Dance, 225, 
+
+A new playlist containing only songs longer than 200 seconds is: 
+Billie Jean, Micheal Jackson, Pop, 232, 
+Sandstorm, Darude, Dance, 225, 
+Never Gonna Give You Up, Rick Hashley, Pop, 215, 
+
+After splitting the playlist from the third song onwards, the original playlist is:
+Billie Jean, Micheal Jackson, Pop, 232, 
+Sandstorm, Darude, Dance, 225, 
+
+After splitting the playlist from the third song onwards, the new playlist is:
+Never Gonna Give You Up, Rick Hashley, Pop, 215, 
+Barbie Girl, Aqua, Dance, 196, 
+

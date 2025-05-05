@@ -1,0 +1,26 @@
+Creating a field of 8x6 tiles
+
+The field at position (1,2) has NOT been touched and does not contain a mine
+The field at position (7,5) has NOT been touched and does not contain a mine
+The field at position (6,0) has NOT been touched and does not contain a mine
+The field at position (0,4) has NOT been touched and does not contain a mine
+
+Manipulating the field
+
+The field at position (1,2) has NOT been touched and contains a mine
+The field at position (7,5) has been touched and does not contain a mine
+The field at position (6,0) has been touched and contains a mine
+The field at position (0,4) has NOT been touched and does not contain a mine
+Creating a new field of 15x16 tiles
+
+The new field at position (1,2) has NOT been touched and does not contain a mine
+The new field at position (14,14) has NOT been touched and does not contain a mine
+The new field at position (13,1) has NOT been touched and does not contain a mine
+The new field at position (1,15) has NOT been touched and does not contain a mine
+
+Manipulating the new field
+
+The new field at position (1,2) has NOT been touched and contains a mine
+The new field at position (14,14) has been touched and contains a mine
+The new field at position (13,1) has been touched and does not contain a mine
+The new field at position (1,15) has NOT been touched and does not contain a mine

@@ -1,0 +1,55 @@
+Initial status:
+The campus owns 2000 units of land.
+Building B101 is for administrative staff and it occupies 300 units of land.
+Building B402 is for administrative staff and it occupies 150 units of land.
+Building B324 is for researchers and it occupies 150 units of land.
+Building B210 is for researchers and it occupies 200 units of land.
+Building B116 is for students and it occupies 250 units of land.
+Building B303 is for students and it occupies 150 units of land.
+
+Adding building B501...success
+Adding building B502...success
+Adding building B503...success
+
+Current status:
+The campus owns 2000 units of land.
+Building B101 is for administrative staff and it occupies 300 units of land.
+Building B402 is for administrative staff and it occupies 150 units of land.
+Building B324 is for researchers and it occupies 150 units of land.
+Building B210 is for researchers and it occupies 200 units of land.
+Building B116 is for students and it occupies 250 units of land.
+Building B303 is for students and it occupies 150 units of land.
+Building B501 is for researchers and it occupies 200 units of land.
+Building B502 is for researchers and it occupies 150 units of land.
+Building B503 is for administrative staff and it occupies 100 units of land.
+
+Adding building B101 which already exists...failed
+Adding building B500 exceeding campus land occupation limits...failed
+
+Current status:
+The campus owns 2000 units of land.
+Building B101 is for administrative staff and it occupies 300 units of land.
+Building B402 is for administrative staff and it occupies 150 units of land.
+Building B324 is for researchers and it occupies 150 units of land.
+Building B210 is for researchers and it occupies 200 units of land.
+Building B116 is for students and it occupies 250 units of land.
+Building B303 is for students and it occupies 150 units of land.
+Building B501 is for researchers and it occupies 200 units of land.
+Building B502 is for researchers and it occupies 150 units of land.
+Building B503 is for administrative staff and it occupies 100 units of land.
+
+Adding building B600...success
+
+Current status:
+The campus owns 2000 units of land.
+Building B101 is for administrative staff and it occupies 300 units of land.
+Building B402 is for administrative staff and it occupies 150 units of land.
+Building B324 is for researchers and it occupies 150 units of land.
+Building B210 is for researchers and it occupies 200 units of land.
+Building B116 is for students and it occupies 250 units of land.
+Building B303 is for students and it occupies 150 units of land.
+Building B501 is for researchers and it occupies 200 units of land.
+Building B502 is for researchers and it occupies 150 units of land.
+Building B503 is for administrative staff and it occupies 100 units of land.
+Building B600 is for students and it occupies 150 units of land.
+

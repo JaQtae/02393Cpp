@@ -1,0 +1,10 @@
+Buffer initialized with 8 as upper bound and -2 as default value
+Buffer contains 0 values
+Read -2 from buffer. Buffer now contains 0 values
+Wrote 5 and 7 to buffer. Buffer now contains 2 values
+Read 5 from buffer. Read 7 from buffer. Buffer now contains 0 values
+Read -2 from buffer. Buffer now contains 0 values
+Wrote 8, 2 and 6 to buffer. Buffer now contains 2 values
+Read 2 from buffer. Buffer now contains 1 values
+Wrote 4, 4, 1, 3 and 6 to buffer. Buffer now contains 6 values
+Read 6 from buffer. Read 4 from buffer. Read 4 from buffer. Read 1 from buffer. Read 3 from buffer. Read 6 from buffer. Buffer now contains 0 values

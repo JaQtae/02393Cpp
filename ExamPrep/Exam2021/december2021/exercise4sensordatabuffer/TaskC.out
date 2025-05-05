@@ -1,0 +1,4 @@
+Reading from the buffer returns: 0
+Reading from the buffer now returns: 42
+Reading from the buffer now returns: -100
+Reading from the buffer now returns: 5

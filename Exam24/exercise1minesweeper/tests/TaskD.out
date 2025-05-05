@@ -1,0 +1,92 @@
+Manually creating a field of 7x5 tiles
+
+The position of the mines in the field is:
+  M  
+M    
+ M   
+  M  
+     
+  M  
+     
+
+Walking on the field
+
+The field is now:
+EEM  
+M    
+ M   
+  M  
+     
+  M  
+     
+The game is NOT over
+
+Walking on the field
+
+The field is now:
+EEME 
+M    
+ M   
+  M  
+     
+  M  
+     
+The game is NOT over
+
+Walking on the field
+
+The field is now:
+EEME 
+M    
+ M   
+  M  
+     
+  M  
+    E
+The game is NOT over
+
+Creating a new field
+
+Manually creating a field of 4x8 tiles
+
+The position of the mines in the new field is:
+MM      
+        
+  M     
+M       
+
+Walking on the new field
+
+The field is now:
+MM      
+        
+  M     
+ME      
+The game is NOT over
+
+Walking on the field
+
+The field is now:
+MM      
+   E    
+  M     
+MEE     
+The game is NOT over
+
+Walking on the field
+
+The field is now:
+MM      
+   EE   
+  M     
+MEE     
+The game is NOT over
+
+Walking on the field
+
+The field is now:
+MM      
+   EE   
+  M     
+XEE     
+The game is over

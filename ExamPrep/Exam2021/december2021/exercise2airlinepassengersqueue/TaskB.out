@@ -1,0 +1,30 @@
+The passengers queue is: 
+Fiona F. - ticket: 987 (priority)
+Emil E. - ticket: 789
+Daria D. - ticket: 654
+Charlie C. - ticket: 456 (priority)
+Barbara B. - ticket: 321 (priority)
+Alfred A. - ticket: 123
+
+After removing the passenger with ticket 654, the queue is:
+Fiona F. - ticket: 987 (priority)
+Emil E. - ticket: 789
+Charlie C. - ticket: 456 (priority)
+Barbara B. - ticket: 321 (priority)
+Alfred A. - ticket: 123
+
+After removing the passenger with ticket 123, the queue is:
+Fiona F. - ticket: 987 (priority)
+Emil E. - ticket: 789
+Charlie C. - ticket: 456 (priority)
+Barbara B. - ticket: 321 (priority)
+
+After removing the passenger with ticket 987, the queue is:
+Emil E. - ticket: 789
+Charlie C. - ticket: 456 (priority)
+Barbara B. - ticket: 321 (priority)
+
+After removing the passenger with ticket 101, the queue is:
+Emil E. - ticket: 789
+Charlie C. - ticket: 456 (priority)
+Barbara B. - ticket: 321 (priority)

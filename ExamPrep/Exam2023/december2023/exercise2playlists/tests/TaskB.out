@@ -1,0 +1,16 @@
+Creating a playlist
+
+The playlist is: 
+Song6, ArtistD, Rock, 298, 
+Song5, ArtistD, Rap, 312, 
+Song4, ArtistC, Rock, 248, 
+Song3, ArtistB, Dance, 256, 
+Song2, ArtistB, Pop, 223, 
+Song1, ArtistA, Pop, 185, 
+
+A new playlist containing only pop songs is : Song2, ArtistB, Pop, 223, 
+Song1, ArtistA, Pop, 185, 
+
+A new playlist containing only dance songs is : Song3, ArtistB, Dance, 256, 
+
+A new playlist containing only country songs is : 

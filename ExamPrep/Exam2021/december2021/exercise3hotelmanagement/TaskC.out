@@ -1,0 +1,22 @@
+Initial hotel occupancy:
+Room 'Daisy' is occupied by Alan Smithee (id: xyz890)
+Room 'Geranium' is empty
+Room 'Lotus' is occupied by Kathryn Bigelow (id: 456abc)
+Room 'Orchid' is occupied by Alan Smithee (id: abc123)
+Room 'Tulip' is occupied by Denis Villeneuve (id: 123xyz)
+
+Room(s) occupied by Alan Smithee with id 'abc123':
+Orchid
+
+Room(s) occupied by someone called Alan Smithee:
+Daisy
+Orchid
+
+Room(s) occupied by a guest with id '123xyz':
+Tulip
+
+Room(s) occupied by a guest:
+Daisy
+Lotus
+Orchid
+Tulip
