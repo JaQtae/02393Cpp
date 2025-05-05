@@ -1,0 +1,62 @@
+
+tests completed!
+
+results: 
+---------------------------------------------------------------------
+Example: compiles: yes, passes tests: no
+reason: Example was expected to return the following output: The winner of the tournament is: Compute
+The maximum points scored during a match were: 5
+Has DTU Energy lost all matches? Yes!
+Has DTU Space lost all matches? Yes!
+Has DTU Physics lost all matches? No!
+
+Instead, it returned the following output:
+The winner of the tournament is: Compute
+The maximum points scored during a match were: 0
+Has DTU Energy lost all matches? Yes!
+Has DTU Space lost all matches? Yes!
+Has DTU Physics lost all matches? Yes!
+---------------------------------------------------------------------
+TaskA: compiles: yes, passes tests: no
+reason: TaskA was expected to return the following output: The winner of an empty torunament is: 
+The winner in one of the team nodes is: 
+The winner of one of the initial matches is: Space
+The winner of the semifinal is: Physics
+The winner of the tournament is: Learn for Life
+
+Instead, it returned the following output:
+The winner of an empty torunament is: 
+The winner in one of the team nodes is: Physics
+The winner of one of the initial matches is: Space
+The winner of the semifinal is: Physics
+The winner of the tournament is: Learn for Life
+---------------------------------------------------------------------
+TaskB: compiles: yes, passes tests: no
+reason: TaskB was expected to return the following output: The highest score in an empty torunament is: 0
+The highest score in one of the team nodes is: 0
+The highest score in one of the initial matches is: 2
+The highest score up to the semifinal is: 3
+The highest score in the tournament is: 4
+
+Instead, it returned the following output:
+The highest score in an empty torunament is: 0
+The highest score in one of the team nodes is: 0
+The highest score in one of the initial matches is: 0
+The highest score up to the semifinal is: 0
+The highest score in the tournament is: 0
+---------------------------------------------------------------------
+TaskC: compiles: yes, passes tests: no
+reason: TaskC was expected to return the following output: Has DTU Offshore lost all the matches in an empty tournament? No!
+Has DTU Offshore lost all the matches in a team node? No!
+Has DTU Offshore lost all the matches in the tournament? Yes!
+Has DTU Skylab lost all the matches in the tournament? No!
+Has DTU Management lost all the matches in the tournament? Yes!
+
+Instead, it returned the following output:
+Has DTU Offshore lost all the matches in an empty tournament? Yes!
+Has DTU Offshore lost all the matches in a team node? Yes!
+Has DTU Offshore lost all the matches in the tournament? Yes!
+Has DTU Skylab lost all the matches in the tournament? Yes!
+Has DTU Management lost all the matches in the tournament? Yes!
+---------------------------------------------------------------------
+total score: 0%

@@ -18,7 +18,7 @@ void FilteringBuffer::write(int v) {
         return;
     }
     this->data.push_back(v);
-    this->memory.insert(v);
+    this->memory.insert(v); // Insertion into set<int> memory
 }
 
 unsigned int FilteringBuffer::occupancy() {
