@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include "ex03-library.h"
 using namespace std;
 
@@ -34,42 +35,72 @@ Campus::Campus() {
 // Task 3(a).  Implement this method
 bool Campus::buildNewBuilding(string name, Purpose purpose, unsigned int landOccupation) {
 
-    bool buildingExists = false;
+    // (a) Check if the building already exists
+    for (size_t i = 0; i < this->buildings.size(); i++) {
+        if (this->buildings[i].name == name) {
+            return false; // Building already exists
+        }
+    }
+
+    // Can also be done as
+    //      for (const Building &b : buildings) {
+    //      if (b.name == name) return false;
+    //      }
+    //      for (const Building &b : buildings) {
+    //      total += b.landOccupation;
+    //      }
+
+    // (b.1) Check if the new building + all others > 90% of Campus
+        // Compute total land
     unsigned int total = 0;
     for (size_t i = 0; i < this->buildings.size(); i++) {
-        if (this->buildings[i].name == name){
-            buildingExists = true;
-            break;
-        }
         total += buildings[i].landOccupation; // Running total of land occupation
     }
-    if (buildingExists) {
-        return false;
+        // Check condition of 90%
+    if (total + landOccupation > (this->land * 0.9)) { // If new building + all others > 90% of Campus
+        return false; // Not enough land available
     }
-
-    if (total+landOccupation > ((this->land/100) * 90)) { // If new building + all others > 90% of Campus
-        return false;
-    } else { // Otherwise add it to the end of buildings.
-        this->buildings.push_back({name, purpose, landOccupation}); // Information input
-        return true;
-    }
-
+    // (b.2) If not return true and update the vector of buildings.
+        // Update buildings vector
+    this->buildings.push_back({name, purpose, landOccupation}); // Information input
+    return true; // Building added successfully
     
 }
 
 // Task 3(b).  Implement this method
-void Campus::printBuildingNames(Purpose purpose){
+// void Campus::printBuildingNames(Purpose purpose){
+//     // They both live under #include <algorithm>
+//     // sort() is unstable -- does not preserve relative order of equal elements
+//     // stable_sort() is stable -- preserves relative order of equal elements
 
-    for (auto it = this->buildings.begin(); it != this->buildings.end(); it++) {
-        if (it->purpose == purpose) {
-            cout << it->name << endl; // I need to do the sorting too..
+
+//     for (auto it = this->buildings.begin(); it != this->buildings.end(); it++) {
+//         if (it->purpose == purpose) {
+//             cout << it->name << endl; // I need to do the sorting too..
+//         }
+//     }
+// }
+void Campus::printBuildingNames(Purpose purpose) {
+    // collect matching buildings
+    vector<Building> filtered;
+    for (const Building &b : buildings) {
+        if (b.purpose == purpose) filtered.push_back(b);
+    }
+    // sort by landOccupation ascending, stable for equal sizes
+    stable_sort(filtered.begin(), filtered.end(),
+        [](const Building &a, const Building &b) {
+            return a.landOccupation < b.landOccupation;
         }
+    );
+    // print names
+    for (const Building &b : filtered) {
+        cout << b.name << endl;
     }
 }
 
 // Task 3(c).  Implement this method
 bool Campus::repurposeBuilding(string name, Purpose newPurpose) {
-
+    return false;
 
 }
 
