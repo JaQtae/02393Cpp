@@ -61,28 +61,45 @@ int BoundedBuffer::read() {
 }
 
 // Task 4(d).  Write a working implementation of setBound(int v)
-
 unsigned int BoundedBuffer::setBound(int v){
     this->upper_bound = v; // new upper bound
 
-    // Remove all values in buffer below this bound
-    // for each thing in buffer
-
     unsigned int val_removed_from_buffer = 0;
-    sort(this->buffer.begin(), this->buffer.end());
-
-
-    for (auto it = this->buffer.begin(); it < this->buffer.end(); it++) {
-        // Misunderstanding pointer it somehow...
-        if (*it > this->upper_bound){
-            this->buffer.erase(it);
-            val_removed_from_buffer++;
-            this->writes--;
+    auto it = this->buffer.begin();
+    while (it != this->buffer.end()) {
+        if (*it >= this->upper_bound) {
+            it = this->buffer.erase(it); // Get next valid iterator
+            ++val_removed_from_buffer;
+            --this->writes; // keep track of occupancy, syncing with write()
+        } else {
+            ++it; // Only advance when we do NOT erase!
         }
     }
     return val_removed_from_buffer;
-
 }
+// DID NOT WORK AT THE EXAM
+// this->upper_bound = v; // new upper bound
+
+// // Remove all values in buffer below this bound
+// // for each thing in buffer
+
+// unsigned int val_removed_from_buffer = 0;
+// sort(this->buffer.begin(), this->buffer.end()); ---> NOBODY TOLD US TO SORT!!! BREAKS INSERTION ORDER
+
+    // --> YOU CANNOT
+// for (auto it = this->buffer.begin(); it < this->buffer.end(); it++) {
+//     // Misunderstanding pointer it somehow...
+//     if (*it > this->upper_bound){
+//         this->buffer.erase(it);  --> Calling erase(it) invalidates the iterator!!!!!!
+//                                  --> Next it++ will point to a dead iterator
+//                                  --> Or we will just skip the next element...
+//         val_removed_from_buffer++;
+//         this->writes--;
+//     }
+// }
+// return val_removed_from_buffer;
+
+
 
 
 // Do not modify

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "ex04-library.h"
+#include "../ex04-library.h"
 using namespace std;
 
 string boolToString(bool v){
