@@ -51,6 +51,7 @@ void ParkingArea::park(string parkingSpaceID, string plate, string owner, Catego
     if (this->parkingOccupancy.find(parkingSpaceID) != this->parkingOccupancy.end()){
         return; // do nothing
     }
+    
     // (2.2.2) It's not occupied, so we update
     Vehicle v = {plate, owner};
     this->parkingOccupancy[parkingSpaceID] = v;
@@ -88,6 +89,21 @@ unsigned int ParkingArea::getEmptySpaces(Category category) {
 
 // Task 3(d).  Implement this method
 void ParkingArea::findVehicles(vector<string> owners) {
+    // for each parkingspace, get the id and get whether it is occupied.
+    // if it's occupied, then look if the owners is in our vector. If so, print it out one per line.
+    for (const auto& parkingSpace : this->parkingSpaces){
+        auto psid = parkingSpace.first; // get the id of the parkingspace
+        auto it = this->parkingOccupancy.find(psid);
+
+        if (it != this->parkingOccupancy.end()){ // if it is occupied  (NOT NOT EMPTY)
+            for (const auto& owner : owners) { // for each owner in owners
+                if (it->second.owner == owner) { // if parkingspace owner matches
+                    cout << psid << endl; // print
+                }
+            }
+        }
+
+    }
 }
 
 // Do not modify

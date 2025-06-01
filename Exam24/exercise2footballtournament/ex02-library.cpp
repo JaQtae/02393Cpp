@@ -2,13 +2,108 @@
 #include "ex02-library.h"
 using namespace std;
 
-// Task 2(a).  Implement this function
-string winner(TournamentNode *t) {
-    // if no pointers OR if we start with a team (its not a tournament then...)
-    if (t == nullptr || t->nodeType == team) {
+// -------------- Helper functions ----------------- //
+// If t is null or not a match, returns nullptr
+static TournamentNode *getMatchWinner(TournamentNode *t) {
+    if (!t || t->nodeType != match) return nullptr;
+    // if left scored more than right, left subtree wins; else right subtree wins
+    return (t->leftPoints > t->rightPoints) ? t->left : t->right;
+}
+
+// If t is null or not a match, returns nullptr
+static TournamentNode *getMatchLoser(TournamentNode *t) {
+    if (!t || t->nodeType != match) return nullptr;
+    // the opposite of getMatchWinner
+    return (t->leftPoints < t->rightPoints) ? t->left : t->right;
+}
+// Recursively search t for a leaf‐node team with name == teamName.
+// Returns the first encountered leaf pointer, or nullptr if not found.
+static TournamentNode *findTeamNode(TournamentNode *t, const std::string &teamName) {
+    if (!t) return nullptr;
+    if (t->nodeType == team) {
+        return (t->name == teamName) ? t : nullptr;
+    }
+    // Otherwise it's a match: search left & right
+    TournamentNode *leftRes = findTeamNode(t->left, teamName);
+    if (leftRes) return leftRes;
+    return findTeamNode(t->right, teamName);
+}
+// Count how many matches a given team has actually played 
+// (i.e., how many match‐nodes in which that team was one of the two participants).
+// Note: if a team loses its first match, that single match counts.
+// If the team progresses multiple rounds, you count each match it played in.
+static unsigned int countMatchesPlayedByTeam(TournamentNode *t, const std::string &teamName) {
+    if (!t) return 0;
+    // If leaf
+    if (t->nodeType == team) {
+        // Leaf itself is not a match, so contributes 0
+        return 0;
+    }
+    // t is a match. Check if teamName appears in left subtree or right subtree.
+    bool inLeft  = (findTeamNode(t->left, teamName) != nullptr);
+    bool inRight = (findTeamNode(t->right, teamName) != nullptr);
+    unsigned int countHere = (inLeft || inRight) ? 1 : 0;
+    // Recurse down both sides:
+    return countHere
+         + countMatchesPlayedByTeam(t->left, teamName)
+         + countMatchesPlayedByTeam(t->right, teamName);
+}
+// Checks if team won a specific match
+static bool didTeamWinMatch(TournamentNode *matchNode, const std::string &teamName) {
+    if (!matchNode || matchNode->nodeType != match) return false;
+    TournamentNode *winner = getMatchWinner(matchNode);
+    // If the winner is a leaf‐node (team), check its name
+    if (winner && winner->nodeType == team && winner->name == teamName) {
+        return true;
+    }
+    return false;
+}
+
+static unsigned int countMatchesWonByTeam(TournamentNode *t, const std::string &teamName) {
+    if (!t) return 0;
+    if (t->nodeType == team) {
+        return 0;
+    }
+    // t is a match
+    unsigned int total = didTeamWinMatch(t, teamName) ? 1 : 0;
+    total += countMatchesWonByTeam(t->left, teamName);
+    total += countMatchesWonByTeam(t->right, teamName);
+    return total;
+}
+
+static unsigned int findMaxScoreInAllMatches(TournamentNode *t) {
+    if (!t) return 0;
+    if (t->nodeType == team) return 0;
+    unsigned int bestHere = std::max(t->leftPoints, t->rightPoints);
+    unsigned int leftSub  = findMaxScoreInAllMatches(t->left);
+    unsigned int rightSub = findMaxScoreInAllMatches(t->right);
+    return std::max(bestHere, std::max(leftSub, rightSub));
+}
+
+static unsigned int findMinScoreInAllMatches(TournamentNode *t) {
+    if (!t) return UINT_MAX;  
+    if (t->nodeType == team) return UINT_MAX;
+    // In this match, the losing score is min(leftPoints, rightPoints)
+    unsigned int loseHere = std::min(t->leftPoints, t->rightPoints);
+    unsigned int leftSub  = findMinScoreInAllMatches(t->left);
+    unsigned int rightSub = findMinScoreInAllMatches(t->right);
+    return std::min(loseHere, std::min(leftSub, rightSub));
+}
+
+static bool anyTeamHasScoreAbove(TournamentNode *t, unsigned threshold) {
+    if (!t) return false;
+    if (t->nodeType == team) return false;
+    if (t->leftPoints >= threshold || t->rightPoints >= threshold) {
+        return true;
+    }
+    return anyTeamHasScoreAbove(t->left, threshold)
+        || anyTeamHasScoreAbove(t->right, threshold);
+}
+
+static string teamWonTournament(TournamentNode *t){
+    if (t == nullptr || t->nodeType == team){
         return "";
     }
-
     // Recursively go into WINNING subtree or branch
     if (t->leftPoints > t->rightPoints) { // Left wins
         if (t->left->nodeType == team) { // if left isnt a match its a team
@@ -23,84 +118,39 @@ string winner(TournamentNode *t) {
         return winner(t->right);
     } 
 }
+// -------------------------------------------------------------------------------
+// – getMatchWinner(t) → returns pointer to the subtree (leaf or match) that won at node t.
+// – getMatchLoser(t) → pointer to the subtree that lost.
+// – findTeamNode(t, name) → pointer to leaf node if found, else nullptr.
+// – countMatchesPlayedByTeam(t, name) → total number of match‐nodes involving name.
+// – countMatchesWonByTeam(t, name) → total number of match‐nodes that name actually won.
+// – findMaxScoreInAllMatches(t) → highest single‐team score across all matches.
+// – findMinScoreInAllMatches(t) → lowest losing score across all matches.
+// – anyTeamHasScoreAbove(t, threshold) → true if any match has a side ≥ threshold.
+
+// Task 2(a).  Implement this function
+string winner(TournamentNode *t) {
+    return teamWonTournament(t);
+}
 
 // Task 2(b).  Implement this function
 unsigned int highestScore(TournamentNode *t) {
-    // if no pointers OR if we start with a team (its not a tournament then...)
-    // NOT STRICTLY TOLD TO CHECK TEAM, IF WE DONT ITS FINE, JUST ONE MORE RECURSION!!
-    if (t == nullptr) { //|| t->nodeType == team) {
+    if (t == nullptr){
         return 0;
     }
-    // This stores the maximum points seen so far, starting with the first match.
-    // If we find any match in recursion, we will return the max points of that match.
-
-    unsigned int currentMatch_max = max(t->leftPoints, t->rightPoints); // get current match max score
-    
-    unsigned int leftScore = highestScore(t->left); // get left score
-    unsigned int rightScore = highestScore(t->right); // get right score
-    
-    // Compares the parent match score with the max of the left and right match children
-    // and returns the maximum of all three. (bubbles up the previous cell!!!)
-    return max(currentMatch_max, max(leftScore, rightScore)); 
-
-    // Example from exam (sanity check):
-    //         (1, 2)        <-- Root node: max(1,2) returns 2, recurse into left and right subtrees
-    //        /      \ 
-    //      (1, 5)   (3, 1)  <-- max(1,3) left and max(3,1) right both return 3, recurse
-    //     /    \     /   \
-    //    ()    ()   ()   () <-- it's a team node, so return 0
-
-    // Left: returns max(5, 0, 0) = 5 --> sends to root node
-    // Right: returns max(3, 0, 0) = 3 --> sends to root node
-    // Root: returns max(2, max(5, 3)) = max(2, 5) = 5 --> sends to main function
-    // So the highest score is 5.
+    unsigned highest_score = findMaxScoreInAllMatches(t);
+    return highest_score;
 }
 
-// helper function to get the loser of a match
-TournamentNode* pointerToLoser(TournamentNode* t) {
-    // Finds the loser of a match and returns the pointer to the loser node.
-    // IF there is no match, return nullptr.
-    if (t == nullptr || t->nodeType != match) return nullptr;
-
-    if (t->leftPoints < t->rightPoints) {
-        return t->left; // left lost, so return left pointer
-    } else {
-        return t->right; // right lost
-    }
-}
 
 // Task 2(c).  Implement this function
 bool lostAllMatches(TournamentNode *t, string teamName) {
     if (t == nullptr || t->nodeType == team) {
-        return false; // Special case
+        return false;
     }
-    // Pointer to child node of side that lost the current match
-    TournamentNode* loserNode = pointerToLoser(t);
-
-    // Does loserNode contain queried info? (e.g. team node and has correct team name)
-    bool lostThisMatch = (loserNode->nodeType == team && loserNode->name == teamName);
-
-    // Recurse into next matches (left and right) to check if the team lost there too.
-    bool lostInLeftSubtree = lostAllMatches(t->left, teamName);
-    bool lostInRightSubtree = lostAllMatches(t->right, teamName);
-
-    // If the team wins at any point, we return false via pointerToLoser.
-    // We only return true if it lost in a tree with 1 match OR lost ALL matches.
-    return lostThisMatch || lostInLeftSubtree || lostInRightSubtree;
-    
-// Example from exam (sanity check):
-// Call 1: lostAllMatches(root) = false || Call 2 || Call 3 → true
-//   -->    Call 2: lostAllMatches(left) = true || false || false → true
-//   -->    Call 3: lostAllMatches(right) = false || false || false → false
-
-// Example with win and lose:
-// Call 1: match (1,2) — lostThisMatch = false (Since next node is a match!)
-// ├── Call 2 (LEFT): match (1,5) — lostThisMatch = false (They won)
-// │   ├── Energy — false (lost, but not the team we are looking for)
-// │   └── Aqua — false (won)
-// ├── Call 3 (RIGHT): match (3,1) — lostThisMatch = false
-// │   ├── Compute — false (not team we are looking for)
-// │   └── Space — false (not team we are looking for)
-// Final return: false || false || false → false
-
+    unsigned nr_won_by_team = countMatchesWonByTeam(t, teamName);
+    if (nr_won_by_team == 0){
+        return true;
+    }
+    return false; // Placeholder return value
 }

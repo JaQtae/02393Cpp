@@ -72,6 +72,24 @@
         "streambuf": "cpp",
         "text_encoding": "cpp",
         "typeinfo": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "xlocale": "cpp",
+        "xtree": "cpp",
+        "xhash": "cpp",
+        "xutility": "cpp",
+        "cstring": "cpp",
+        "iomanip": "cpp",
+        "ios": "cpp",
+        "list": "cpp",
+        "unordered_set": "cpp",
+        "xfacet": "cpp",
+        "xiosbase": "cpp",
+        "xlocinfo": "cpp",
+        "xlocmon": "cpp",
+        "xlocnum": "cpp",
+        "xloctime": "cpp",
+        "xmemory": "cpp",
+        "xstddef": "cpp",
+        "xtr1common": "cpp"
     }
 }

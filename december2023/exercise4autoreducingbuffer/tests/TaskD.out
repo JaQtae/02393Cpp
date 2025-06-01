@@ -1,0 +1,20 @@
+Buffer initialized with capacity 3 and -1 as default value
+Buffer contains 0 values
+Buffer contains 7? false
+Buffer contains -1? false
+Wrote 7, 3 and 2 to buffer. Buffer contains 3 values
+Buffer contains 7? true
+Buffer contains 3? true
+Buffer contains 2? true
+Wrote 4 to buffer. Buffer contains 3 values
+Buffer contains 7? false
+Buffer contains 3? false
+Buffer contains 2? true
+Buffer contains 4? true
+Buffer contains 5? true
+Wrote 1 to buffer. Buffer now contains 3 values
+Buffer contains 7? false
+Buffer contains 3? false
+Buffer contains 2? false
+Buffer contains 4? true
+Buffer contains 5? false

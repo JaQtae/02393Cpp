@@ -30,7 +30,6 @@ M   M
 M M  
 
 Attempting to place too many mines
-wrong return value when invoking placeMine
 The position of the mines in the field is:
 M   M
  M  M
@@ -38,7 +37,7 @@ M   M
      
  MM  
      
-MMM  
+M M  
 Manually creating a new field of 3x2 tiles
 
 

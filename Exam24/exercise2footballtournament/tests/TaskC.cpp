@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "ex02-library.h"
+#include "../ex02-library.h"
 using namespace std;
 
 int main() {
